@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import React from "react";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "common/interfaces";
+import { gameStyles as styles } from "./style";
 
 type Props = StackScreenProps<RootStackParamList, "Game">;
 
@@ -16,11 +17,3 @@ const GameScreen: React.FC<Props> = ({ route, navigation }) => {
 };
 
 export default GameScreen;
-
-const styles = StyleSheet.create({
-    mainContainer: {
-        marginVertical: 40,
-        marginHorizontal: 20,
-
-    }
-});
