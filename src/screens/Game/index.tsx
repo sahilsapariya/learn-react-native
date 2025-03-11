@@ -3,6 +3,7 @@ import React from "react";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "common/interfaces";
 import { gameStyles as styles } from "./style";
+import ScreenWrapper from "common/wrappers/ScreenWrapper";
 
 type Props = StackScreenProps<RootStackParamList, "Game">;
 
@@ -10,9 +11,11 @@ const GameScreen: React.FC<Props> = ({ route, navigation }) => {
   const { userNumber } = route.params;
 
   return (
-    <View style={styles.mainContainer}>
-      <Text>{userNumber}</Text>
-    </View>
+    <ScreenWrapper>
+      <View style={styles.mainContainer}>
+        <Text>{userNumber}</Text>
+      </View>
+    </ScreenWrapper>
   );
 };
 

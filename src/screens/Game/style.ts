@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const gameStyles = StyleSheet.create({
   mainContainer: {
-    marginVertical: 40,
+    marginVertical: 0,
     marginHorizontal: 20,
   },
 });

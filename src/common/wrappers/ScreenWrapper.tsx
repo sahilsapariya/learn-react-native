@@ -1,5 +1,10 @@
 import React from "react";
-import { StyleSheet, ImageBackground } from "react-native";
+import {
+  StyleSheet,
+  ImageBackground,
+  SafeAreaView,
+  Platform,
+} from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 interface ScreenWrapperProps {
@@ -15,7 +20,7 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children }) => {
         style={styles.rootScreen}
         imageStyle={styles.backgroundImage}
       >
-        {children}
+        <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>
       </ImageBackground>
     </LinearGradient>
   );
@@ -29,5 +34,9 @@ const styles = StyleSheet.create({
   },
   backgroundImage: {
     opacity: 0.25,
+  },
+  safeArea: {
+    flex: 1,
+    marginTop: Platform.OS === "android" ? 35 : 0,
   },
 });
