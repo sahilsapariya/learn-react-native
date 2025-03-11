@@ -1,20 +1,28 @@
-import { StyleSheet, View, TextInput, Button, Modal, Image, Text } from "react-native";
-import React, { useState } from "react";
+import { StyleSheet, ImageBackground } from "react-native";
+import React from "react";
+import StartGameScreen from "./screens/StartGameScreen";
+import { LinearGradient } from "expo-linear-gradient";
 
 export default function App() {
   return (
-    <>
-      <View style={styles.container}>
-        <Text>Hello world</Text>
-      </View>
-    </>
+    <LinearGradient colors={["#ddb52f", "#4e0329"]} style={styles.rootScreen}>
+      <ImageBackground
+        source={require("./assets/images/dices.jpg")}
+        resizeMode="cover"
+        style={styles.rootScreen}
+        imageStyle={styles.backgroundImage}
+      >
+        <StartGameScreen />
+      </ImageBackground>
+    </LinearGradient>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  rootScreen: {
     flex: 1,
-    paddingVertical: 50,
-    paddingHorizontal: 20,
+  },
+  backgroundImage: {
+    opacity: 0.25,
   },
 });
