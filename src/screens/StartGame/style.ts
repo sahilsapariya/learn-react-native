@@ -28,9 +28,9 @@ export const startGameStyles = StyleSheet.create({
   numberInput: {
     width: 75,
     fontSize: 32,
-    borderBottomColor: Colors.secondary,
+    borderBottomColor: Colors.secondary500,
     borderBottomWidth: 2,
-    color: Colors.secondary,
+    color: Colors.secondary500,
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",

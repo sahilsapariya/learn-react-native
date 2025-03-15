@@ -1,6 +1,6 @@
 import { Alert, TextInput, View } from "react-native";
 import React, { useState } from "react";
-import PrimaryButton from "common/components/PrimaryButton";
+import PrimaryButton from "common/components/ui/PrimaryButton";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "common/interfaces";
 import ScreenWrapper from "common/wrappers/ScreenWrapper";
