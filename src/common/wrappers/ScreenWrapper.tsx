@@ -6,6 +6,7 @@ import {
   Platform,
 } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
+import Colors from "constants/colors";
 
 interface ScreenWrapperProps {
   children: React.ReactNode;
@@ -13,7 +14,7 @@ interface ScreenWrapperProps {
 
 const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children }) => {
   return (
-    <LinearGradient colors={["#ddb52f", "#4e0329"]} style={styles.rootScreen}>
+    <LinearGradient colors={[Colors.secondary500, Colors.primary600]} style={styles.rootScreen}>
       <ImageBackground
         source={require("assets/images/dices.jpg")}
         resizeMode="cover"

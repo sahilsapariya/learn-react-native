@@ -1,3 +1,4 @@
+import Colors from "constants/colors";
 import { StyleSheet } from "react-native";
 
 export const startGameStyles = StyleSheet.create({
@@ -7,7 +8,7 @@ export const startGameStyles = StyleSheet.create({
     marginTop: 100,
     marginHorizontal: 24,
     padding: 16,
-    backgroundColor: "#4e0329",
+    backgroundColor: Colors.primary600,
     borderRadius: 10,
     elevation: 8,
     shadowColor: "red",
@@ -27,9 +28,9 @@ export const startGameStyles = StyleSheet.create({
   numberInput: {
     width: 75,
     fontSize: 32,
-    borderBottomColor: "#ddb52f",
+    borderBottomColor: Colors.secondary,
     borderBottomWidth: 2,
-    color: "#ddb52f",
+    color: Colors.secondary,
     marginVertical: 8,
     fontWeight: "bold",
     textAlign: "center",
