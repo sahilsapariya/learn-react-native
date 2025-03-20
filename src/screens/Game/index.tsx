@@ -26,7 +26,7 @@ const GameScreen: React.FC<Props> = ({ route, navigation }) => {
     if (currentGuess === userNumber) {
       navigation.navigate("GameOver", { rounds, userNumber });
     }
-  }, []);
+  }, [currentGuess]);
 
   const nextGuessHandler = (direction: Direction) => {
     if (
@@ -36,11 +36,6 @@ const GameScreen: React.FC<Props> = ({ route, navigation }) => {
       Alert.alert("Don't lie!", "You know that this is wrong...", [
         { text: "Sorry!", style: "cancel" },
       ]);
-      return;
-    }
-
-    if (currentGuess === userNumber) {
-      navigation.navigate("GameOver", { rounds, userNumber });
       return;
     }
 
