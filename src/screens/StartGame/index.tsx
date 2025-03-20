@@ -1,10 +1,11 @@
-import { Alert, TextInput, View } from "react-native";
+import { Alert, TextInput, View, Text } from "react-native";
 import React, { useState } from "react";
 import PrimaryButton from "common/components/ui/PrimaryButton";
 import { StackScreenProps } from "@react-navigation/stack";
 import { RootStackParamList } from "common/interfaces";
 import ScreenWrapper from "common/wrappers/ScreenWrapper";
 import { startGameStyles as styles } from "./style";
+import Title from "common/components/ui/Title";
 
 type Props = StackScreenProps<RootStackParamList, "StartGame">;
 
@@ -32,7 +33,15 @@ const StartGameScreen: React.FC<Props> = ({ navigation }) => {
 
   return (
     <ScreenWrapper>
+      <Title>Guess My Number</Title>
       <View style={styles.inputContainer}>
+        <Text
+          style={{
+            color: "white",
+          }}
+        >
+          Enter a number
+        </Text>
         <TextInput
           style={styles.numberInput}
           maxLength={2}

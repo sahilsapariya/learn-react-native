@@ -5,8 +5,7 @@ export const startGameStyles = StyleSheet.create({
   inputContainer: {
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 100,
-    marginHorizontal: 24,
+    marginTop: 20,
     padding: 16,
     backgroundColor: Colors.primary600,
     borderRadius: 10,

@@ -39,5 +39,6 @@ const styles = StyleSheet.create({
   safeArea: {
     flex: 1,
     marginTop: Platform.OS === "android" ? 35 : 0,
+    marginHorizontal: 16,
   },
 });
